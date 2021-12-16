@@ -3,7 +3,7 @@
 const express = require('express');
 const { user } = require('../models/index');
 const { todo } = require('../models/index');
-console.log(todo,'------------------------------');
+// console.log(todo,'------------------------------');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const basicAuth = require('../middelware/basickauth');
@@ -22,6 +22,7 @@ router.post('/signUp', async (req, res) => {
 })
 
 router.post('/signin', basicAuth, (req, res) => {
+    console.log(req.body);
     res.status(200).send(req.user);
 })
 

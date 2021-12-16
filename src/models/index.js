@@ -6,8 +6,6 @@ const { Sequelize, DataTypes } = require('sequelize');
 const todoModel = require('./todolist/todolist');
 const userModel = require('./user/user');
 
-
-
 const DATABASE_URL = process.env.DATABASE_URL;
 console.log(DATABASE_URL);
 
